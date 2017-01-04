@@ -82,7 +82,8 @@ class SignInVC: UIViewController, UITextFieldDelegate {
             }else{                                                                  //If successful authentication
                 print("Hannan: Successfull autherticated with FIREBASE!!")
                 if let user = user{
-                    self.completeSignIn(id: user.uid)                                    //Auto login keychain
+                    let userData = ["provider": credential.provider]                //FACEBOOK add user data to firebase
+                    self.completeSignIn(id: user.uid, userData: userData)                                    //Auto login keychain
                 }
                 
                 
@@ -101,7 +102,8 @@ class SignInVC: UIViewController, UITextFieldDelegate {
                     
                     print("Hannan: User Authenticated by Email!")
                     if let user = user{                                             //Keychain autologin
-                        self.completeSignIn(id: user.uid)
+                        let userData = ["provider": user.providerID]                //Add user data to the Firebase database
+                        self.completeSignIn(id: user.uid, userData: userData)
                     }
                     
                 }else{                                                                              //User doesn't exist
@@ -123,7 +125,8 @@ class SignInVC: UIViewController, UITextFieldDelegate {
                             
                             print("Hannan: Created new user Email Firebase")
                             if let user = user{                                             //Keychain autologin
-                                self.completeSignIn(id: user.uid)
+                                let userData = ["provider": user.providerID]                //Add user data to the Firebase database
+                                self.completeSignIn(id: user.uid, userData: userData)
                             }
                         }
                     })
@@ -135,8 +138,11 @@ class SignInVC: UIViewController, UITextFieldDelegate {
         
     }
     
-    func completeSignIn(id: String){                                    //KEYCHAIN AUTO LOGIN
-        KeychainWrapper.standard.set(id, forKey: KEY_UID)
+    func completeSignIn(id: String, userData: Dictionary<String, String>){
+        
+        DataService.ds.createFirebaseDBUser(uid: id, userData: userData)    //Create firebase user data in database
+        
+        KeychainWrapper.standard.set(id, forKey: KEY_UID)               //Keychain AutoLogin
         performSegue(withIdentifier: "goToFeed", sender: nil)           //If keychain exists, login and goto next Feed
     }
     
