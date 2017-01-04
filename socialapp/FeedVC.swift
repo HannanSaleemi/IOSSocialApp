@@ -17,11 +17,11 @@ class FeedVC: UIViewController {
 
         
     }
-    @IBAction func signOutTapped(_ sender: Any) {
-        KeychainWrapper.standard.removeObject(forKey: KEY_UID)      //Remove key from KEYCHAIN fro autologin
-        try! FIRAuth.auth()?.signOut()                              //Sign out of Firebase
-        performSegue(withIdentifier: "goToSignIn", sender: nil)     //Back to Login Screen
-        
-    }
+//    @IBAction func signOutTapped(_ sender: Any) {
+//        KeychainWrapper.standard.removeObject(forKey: KEY_UID)      //Remove key from KEYCHAIN fro autologin
+//        try! FIRAuth.auth()?.signOut()                              //Sign out of Firebase
+//        performSegue(withIdentifier: "goToSignIn", sender: nil)     //Back to Login Screen
+//        
+//    }
 
 }
