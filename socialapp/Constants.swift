@@ -12,3 +12,5 @@
 import UIKit
 
 let SHADOW_GREY: CGFloat = 120.0 / 255.0                        //Global var for shadow color of logo
+
+let KEY_UID = "uid"                                             //Keychain Autologin
