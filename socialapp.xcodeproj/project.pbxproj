@@ -13,6 +13,7 @@
 		3600C3201E194186000CEA9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3600C31F1E194186000CEA9C /* Assets.xcassets */; };
 		3600C3231E194186000CEA9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3600C3211E194186000CEA9C /* LaunchScreen.storyboard */; };
 		3600C32B1E19429B000CEA9C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3600C32A1E19429B000CEA9C /* GoogleService-Info.plist */; };
+		369A42B11E214F39007F7BE2 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369A42B01E214F39007F7BE2 /* Post.swift */; };
 		36ADC54A1E1992A00063023B /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ADC5491E1992A00063023B /* FancyView.swift */; };
 		36ADC54D1E19933E0063023B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ADC54C1E19933E0063023B /* Constants.swift */; };
 		36ADC54F1E1995D80063023B /* RoundBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ADC54E1E1995D80063023B /* RoundBtn.swift */; };
@@ -34,6 +35,7 @@
 		3600C3221E194186000CEA9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3600C3241E194186000CEA9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3600C32A1E19429B000CEA9C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		369A42B01E214F39007F7BE2 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		36ADC5491E1992A00063023B /* FancyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
 		36ADC54C1E19933E0063023B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		36ADC54E1E1995D80063023B /* RoundBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundBtn.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 		364EF2A01E194617001A1310 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				369A42B01E214F39007F7BE2 /* Post.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				36E763D51E1D14D700F32CC7 /* CircleView.swift in Sources */,
 				36ADC5511E1998DF0063023B /* FancyField.swift in Sources */,
 				3600C31B1E194186000CEA9C /* SignInVC.swift in Sources */,
+				369A42B11E214F39007F7BE2 /* Post.swift in Sources */,
 				36ADC54F1E1995D80063023B /* RoundBtn.swift in Sources */,
 				3600C3191E194186000CEA9C /* AppDelegate.swift in Sources */,
 				36E763DA1E1D631900F32CC7 /* DataService.swift in Sources */,
