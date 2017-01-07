@@ -56,11 +56,17 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        let post = posts[indexPath.row]                 //get post
         
-        let post = posts[indexPath.row]
-        print("Hannan: \(post.caption)")
-        
-        return tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell{       //Create the cell
+            
+            cell.configureCell(post: post)              //update ui for post cell
+            return cell
+            
+        }else{
+            return PostCell()
+        }
     }
 
     
