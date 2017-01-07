@@ -29,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>IBAnimatable.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-socialapp.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,12 +52,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>24EE8EA5B512289E6765B8A4D87AE167</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3D20EE7CFCEDF6BEEEF50AEACC33FD2C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>44CAD6CE523055ED339E87154473A254</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>92063FBA7776497AAF56E42D4AF84B54</key>
+		<key>4DB37FDD6D9682249FC26FBD3DF9EBE9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -68,11 +83,6 @@
 			<true/>
 		</dict>
 		<key>C052BEBFBD0AB5218CC64BA3450F6547</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F082A5C8386F0323FF43D5FF9A3E4571</key>
 		<dict>
 			<key>primary</key>
 			<true/>

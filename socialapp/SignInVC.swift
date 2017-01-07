@@ -20,11 +20,11 @@ class SignInVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailField: FancyField!          //Emails Field
     @IBOutlet weak var passwordField: FancyField!       //Password Field
     
-    @IBOutlet weak var redView: UIView!                 //Incorrect View
-    @IBOutlet weak var incorrectLbl1: UILabel!          //Advice lbl 1
-    @IBOutlet weak var incorrectLbl2: UILabel!          //Advice lbl 2
-    @IBOutlet weak var incorrectLbl3: UILabel!          //advice lbl 3
-    @IBOutlet weak var tryAgainBtn: UIButton!           //try again btn
+    @IBOutlet weak var redView: UIView!
+    @IBOutlet weak var incorrectLbl1: UILabel!
+    @IBOutlet weak var incorrectLbl2: UILabel!
+    @IBOutlet weak var incorrectLbl3: UILabel!
+    @IBOutlet weak var tryAginBtn: UIButton!
     
 
     override func viewDidLoad() {
@@ -45,7 +45,7 @@ class SignInVC: UIViewController, UITextFieldDelegate {
         incorrectLbl1.isHidden = true
         incorrectLbl2.isHidden = true
         incorrectLbl3.isHidden = true
-        tryAgainBtn.isHidden = true
+        tryAginBtn.isHidden = true
         
     }
 
@@ -112,13 +112,13 @@ class SignInVC: UIViewController, UITextFieldDelegate {
                         if error != nil{
                             print("Hannan: Unable to create user PASSWORD MUST BE MORE THAN 6 CHARECTERS")
                             
-                            //Incorrect view
-                            
                             self.redView.isHidden = false
                             self.incorrectLbl1.isHidden = false
                             self.incorrectLbl2.isHidden = false
                             self.incorrectLbl3.isHidden = false
-                            self.tryAgainBtn.isHidden = false
+                            self.tryAginBtn.isHidden = false
+                            
+                            
                             
                             
                         }else{

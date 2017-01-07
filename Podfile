@@ -13,6 +13,7 @@ target 'socialapp' do
   pod 'Firebase/Storage'
   pod 'FBSDKLoginKit'
   pod 'SwiftKeychainWrapper', :git => 'https://github.com/jrendel/SwiftKeychainWrapper.git', :branch => 'master'
+  pod 'IBAnimatable', '~> 3.1'
   
 
 end

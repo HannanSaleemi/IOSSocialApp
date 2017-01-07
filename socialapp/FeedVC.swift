@@ -19,8 +19,13 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         tableView.delegate = self
         tableView.dataSource = self
-
         
+        //Listerners - listens for changes eg) likes/posts removed etc
+        DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in          //Refrence to database - posts section
+            
+            print(snapshot.value!)                                          //This prints JSON data of posts in the database and updates in realtime automatically
+            
+        })
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {       //Sections mostly one

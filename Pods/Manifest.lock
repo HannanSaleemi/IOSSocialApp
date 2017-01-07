@@ -54,6 +54,7 @@ PODS:
     - GoogleToolboxForMac/NSString+URLArguments (= 2.1.0)
   - GoogleToolboxForMac/NSString+URLArguments (2.1.0)
   - GTMSessionFetcher/Core (1.1.7)
+  - IBAnimatable (3.1.2)
   - SwiftKeychainWrapper (3.0.1)
 
 DEPENDENCIES:
@@ -62,6 +63,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - Firebase/Storage
+  - IBAnimatable (~> 3.1)
   - SwiftKeychainWrapper (from `https://github.com/jrendel/SwiftKeychainWrapper.git`, branch `master`)
 
 EXTERNAL SOURCES:
@@ -89,8 +91,9 @@ SPEC CHECKSUMS:
   GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
   GoogleToolboxForMac: 2b2596cbb7186865e98cadf2b1e262d851c2b168
   GTMSessionFetcher: a1f8ed39e4fe21c68957daed472c7afbcdf29166
+  IBAnimatable: 26b74a72df9369d40faab97428477c246b9e42ba
   SwiftKeychainWrapper: e353c2d5ac22e72ff7c1dc3b1de1f0e7341ba030
 
-PODFILE CHECKSUM: 6269b2f6716c514e94abb5b81992b1b0a39d30c0
+PODFILE CHECKSUM: 536e7461d3b55a7c29dba65540ee17ae16a57334
 
 COCOAPODS: 1.1.1
