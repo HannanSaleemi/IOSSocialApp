@@ -10,14 +10,20 @@ import UIKit
 import SwiftKeychainWrapper
 import Firebase
 
-class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var imageAdd: CircleView!
     
     var posts = [Post]()
+    var imagePicker: UIImagePickerController!                   //Pick image from camera roll
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        imagePicker = UIImagePickerController()                 //Initialize image picker
+        imagePicker.allowsEditing = true                        //Allows cropping of the picture
+        imagePicker.delegate = self                             //set delegate to self image picker
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -77,4 +83,55 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         performSegue(withIdentifier: "goToSignIn", sender: nil)     //Back to Login Screen
         
     }
+    
+    
+    //Set image and Once chosen image, get rid of image picker
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage{
+            imageAdd.image = image
+        }else{
+            print("Hannan: a valid image wasn't selected!")
+        }
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func addImageTapped(_ sender: Any) {                      //Add image button tapped (Tap gesture recogniser)
+        
+        present(imagePicker, animated: true, completion: nil)
+        
+    }
+    
+    
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
