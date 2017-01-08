@@ -11,10 +11,14 @@ import Firebase
 
 let DB_BASE = FIRDatabase.database().reference()            //Grabs root database URL, which firebase handles automatically
 
+let STORGAE_BASE = FIRStorage.storage().reference()         //Grabs root of storage URL, which firebase handles automatically
+
 class DataService{
     
     
     static let ds = DataService()   //Creates a singleton - eveyone has access - global (starts with static)
+    
+    //Database Refrences
     
     private var _REF_BASE = DB_BASE
     private var _REF_POSTS = DB_BASE.child("posts")     //Follow root of database and find child posts URL
@@ -38,6 +42,14 @@ class DataService{
         
     }
     
+    
+    //Storage Refrences
+    
+    private var _REF_POST_IMAGES = STORGAE_BASE.child("post-pics")                      //Which folder in base url contain post images
+    
+    var REF_POST_IMAGES: FIRStorageReference{                                           
+        return _REF_POST_IMAGES
+    }
 }
 
 

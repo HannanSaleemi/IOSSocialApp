@@ -44,7 +44,7 @@ class Post{
             self._caption = caption
         }
         
-        if let imageUrl = postData["imageUrl"] as? String{                       //get imageurl from JSON DATA
+        if let imageUrl = postData["imageURL"] as? String{                       //get imageurl from JSON DATA
             self._imageUrl = imageUrl
         }
         
